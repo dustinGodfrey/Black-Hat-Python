@@ -62,10 +62,10 @@ This should output the download process
 ## Installing an IDE:
 - An integrated development environment (IDE) is a way to code efficiently by using tools built in that will include a code editor, syntax highlighting, auto indention, and a debugger. This is much easier to use and more reader friendly than command line text editors like nano and vim.
 
-We will download VS Code to run in our Kali machine:
+We will download VS Code to run in our Kali machine. Navigate to the [downloads page](https://code.visualstudio.com/download) for Visual Studio Code and download the latest version based on your system requirements. Navigate on your Kali machine to where you downloaded the file and run the following command:
 
 ```bash
-sudo apt install code 
+sudo dpkg -i file_name
 ```
 
 
