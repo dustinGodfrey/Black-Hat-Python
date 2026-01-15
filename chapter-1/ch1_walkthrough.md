@@ -1,3 +1,4 @@
+# Chapter 1: Setting Up Python Environment
 
 **This chapter goes over the set up of:**
 - Kali Linux VM
