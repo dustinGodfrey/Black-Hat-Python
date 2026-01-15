@@ -1,6 +1,6 @@
 ## *Black Hat Python*
 
-In this project I will be working through the Justin Seitz and Tim Arnold book *Black Hat Python: Python Programming for Hackers and Pentesters*. 
+In this project I will be working through the Justin Seitz and Tim Arnold book *Black Hat Python: Python Programming for Hackers and Pentesters* (2nd Edition). 
 
 I will go chapter by chapter, updating this repo with every new lesson and tool created. I will explain the methodology, instructions, issues, and final thoughts with each lesson. 
 
