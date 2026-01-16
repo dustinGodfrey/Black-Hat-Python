@@ -1,12 +1,12 @@
 ## UDP Client
 
-- A UDP Client allows you to a server using the User Datagram Protocol. UDP is built for speed, providing fast, connectionless communication. Unlike TCP, UDP has no error checking, is not ordered, and does not wait for any acknowledgement to send the data. This is very useful when using real-time and time-sensitive applications. Some popular uses for UDP are video streaming, DNS, and VoIP.
+- A UDP Client allows you to communicate with a server using the User Datagram Protocol. UDP is built for speed, providing fast, connectionless communication. Unlike TCP, UDP has no error checking, is not ordered, and does not wait for any acknowledgement to send the data. This is very useful when using real-time and time-sensitive applications. Some popular uses for UDP are video streaming, DNS, and VoIP.
 
 - The UDP header is shorter than that of TCP, with only 4 fields being sent over:
 	- Source Port
 	- Destination Port
 	- Length
-	- Checksum (optional)
+	- Checksum (optional for IPv4, Mandatory for IPv6)
 
 - A UDP Client is created in a very similar way to the TCP Client, only making two changes. 
 
@@ -21,4 +21,4 @@
 5. To receive data back, we will call *.recvfrom()*, passing in the amount of bytes to receive back. We are assigning two variables here because we will receive 2 pieces of data back from this: the data and the details of the remote host and port.
 6. We will print out a decoded version of the response, by passing the response variable into *.decode()*. 
 7. Lastly we will close the socket.
-8. To Test: open a terminal in Kali and run 'nc -ulp 9997' to launch Netcat into listening for UDP on port 80. This will catch your sent data. (nc = netcat, -u = udp, -l = listen, p = port)
+8. To Test: open a terminal in Kali and run 'nc -ulp 9997' to launch Netcat into listening for UDP on port 9997. This will catch your sent data. (nc = netcat, -u = udp, -l = listen, p = port)
