@@ -46,6 +46,6 @@
 6. After sending some data, we might want to receive data. This is done by using `.recv()` on the client, and specify the number of bytes of data to receive back from the connected socket. We then assign the response to a variable so it can be decoded in the next step.
 7. We will print out a decoded version of the response, by passing the response variable into `.decode()`. 
 8. Lastly we will close the socket.
-9. To Test: open a terminal in Kali and run 'nc -lnvp 80' to launch Netcat into listening for TCP on port 80. This will catch your sent data. (nc = netcat, -l = listen, -n = numeric, v = verbose, p = port)
+9. To Test: open a terminal in Kali and run `nc -lnvp 80` to launch Netcat into listening for TCP on port 80. This will catch your sent data. (nc = netcat, -l = listen, -n = numeric, v = verbose, p = port)
 
 At this point we have successfully created a TCP Client with Python. In the next steps we will create a UDP Client.
