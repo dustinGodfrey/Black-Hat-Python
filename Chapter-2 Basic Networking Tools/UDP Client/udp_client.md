@@ -1,14 +1,15 @@
 ## UDP Client
 
-- A UDP Client allows you to communicate with a server using the User Datagram Protocol. UDP is built for speed, providing fast, connectionless communication. Unlike TCP, UDP has no error checking, is not ordered, and does not wait for any acknowledgement to send the data. This is very useful when using real-time and time-sensitive applications. Some popular uses for UDP are video streaming, DNS, and VoIP.
-
-- The UDP header is shorter than that of TCP, with only 4 fields being sent over:
-	- Source Port
-	- Destination Port
-	- Length
-	- Checksum (optional for IPv4, Mandatory for IPv6)
-
-- A UDP Client is created in a very similar way to the TCP Client, only making two changes. 
+> [!NOTE]
+> A UDP Client allows you to a server using the User Datagram Protocol. UDP is built for speed, providing fast, connectionless communication. Unlike TCP, UDP has no error checking, is not ordered, and does not wait for any acknowledgement to send the data. This is very useful when using real-time and time-sensitive applications. Some popular uses for UDP are video streaming, DNS, and VoIP.
+>
+> The UDP header is shorter than that of TCP, with only 4 fields being sent over:
+>	- Source Port
+>	- Destination Port
+>	- Length
+>	- Checksum (optional)
+>
+> A UDP Client is created in a very similar way to the TCP Client, only making two changes.  
 
 **Steps to Create a UDP Client**
 
