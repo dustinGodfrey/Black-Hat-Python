@@ -1,8 +1,8 @@
 ## TCP Server
 
-- A TCP server is useful for building services such as internal tooling, simple message brokers, proxies, or lab testing utilities. This example demonstrates a multi-threaded server that can handle multiple clients concurrently.
-
-- This script involves sockets and multithreading. Multithreading allows multiple execution threads to run concurrently within a single process, enabling the server to handle multiple client connections without blocking. Multithreading is useful for tasks that involve waiting, like file handling or network requests, which is what we are using it for in this example.
+> [!NOTE]
+> A TCP server is useful for building services such as internal tooling, simple message brokers, proxies, or lab testing utilities. This example demonstrates a multi-threaded server that can handle multiple clients concurrently.
+> This script involves sockets and multithreading. Multithreading allows multiple execution threads to run concurrently within a single process, enabling the server to handle multiple client connections without blocking. Multithreading is useful for tasks that involve waiting, like file handling or network requests, which is what we are using it for in this example.
 
 1. First we import the modules `socket` and `threading`.
 2. Next, set the IP and PORT variables with the desired address and port number for the server.
