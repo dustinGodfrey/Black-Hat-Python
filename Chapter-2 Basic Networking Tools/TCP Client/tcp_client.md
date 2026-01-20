@@ -2,30 +2,31 @@
 
 
 ## TCP Client
-- A TCP Client allows you to connect to a server using the Transmission Control Protocol. TCP is suited for applications that require reliable, ordered, and error-checked delivery of data. Protocols such as HTTP, HTTPs, FTP, SMTP, and Telnet all use TCP. The TCP data packets are ordered, ensuring the receiving system obtains the correct packets in the correct order. 
-
-- TCP uses a 3-way handshake to ensure the data is reliably sent and received. 
-  1. The client sends a SYN (synchronize) message to the server, letting the server know that the client wants to connect.
-	2. The server responds with a SYN-ACK (synchronize & acknowledge), letting the client know that is is ready to accept the transmission.
-	3. The client sends an ACK (acknowledge) message back, confirming the connection between the two systems
-
-- Each TCP segment includes a header containing control and sequencing information about the data being sent. This includes:
-	- Source and Destination Ports
-	- Sequence Number - Position of the first byte
-	- Acknowledgement Number - Next byte to be received
-	- Header Length
-	- Control Flags:
-		- URG - Urgent Data
-		- ACK - Acknowledgement Valid
-		- PSH - Push Data Immediately
-		- RST - Reset Connection
-		- SYN - Synchronize Sequence Numbers
-		- FIN - Terminate the Connection
-	- Window Size
-	- Checksum - Used for Error Detection
-	- Urgent Pointer - Position of Urgent Data
-
-- A TCP Client can be written to test for services, send garbage data, fuzz, or perform any number of other tasks. Sometimes you will not have the tools available to perform the task at hand so you would have to build those from scratch.
+> [!NOTE]
+> A TCP Client allows you to connect to a server using the Transmission Control Protocol. TCP is suited for applications that require reliable, ordered, and error-checked delivery of data. Protocols such as HTTP, HTTPs, FTP, SMTP, and Telnet all use TCP. The TCP data packets are ordered, ensuring the receiving system obtains the correct packets in the correct order. 
+>
+> TCP uses a 3-way handshake to ensure the data is reliably sent and received. 
+>	1. The client sends a SYN (synchronize) message to the server, letting the server know that the client wants to connect.
+>	2. The server responds with a SYN-ACK (synchronize & acknowledge), letting the client know that is is ready to accept the transmission.
+>	3. The client sends an ACK (acknowledge) message back, confirming the connection between the two systems
+>
+> Each TCP segment includes a header containing control and sequencing information about the data being sent. This includes:
+>	- Source and Destination Ports
+>	- Sequence Number - Position of the first byte
+>	- Acknowledgement Number - Next byte  received
+>	- Header Length
+>	- Control Flags:
+>		- URG - Urgent Data
+>		- ACK - Acknowledgement Valid
+>		- PSH - Push Data Immediately
+>		- RST - Reset Connection
+>		- SYN - Synchronize Sequence Numbers
+>		- FIN - Terminate the Connection
+>	- Window Size
+>	- Checksum - Used for Error Detection
+>	- Urgent Pointer - Position of Urgent Data
+>
+> A TCP Client can be written to test for services, send garbage data, fuzz, or perform any number of other tasks. Sometimes you will not have the tools available to perform the task at hand so you would have to build those from scratch.
 
 **Steps to Create TCP Client**
 
