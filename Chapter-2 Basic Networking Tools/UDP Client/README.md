@@ -1,4 +1,4 @@
-## UDP Client
+# UDP Client
 
 > [!NOTE]
 > A UDP Client allows you to a server using the User Datagram Protocol. UDP is built for speed, providing fast, connectionless communication. Unlike TCP, UDP has no error checking, is not ordered, and does not wait for any acknowledgement to send the data. This is very useful when using real-time and time-sensitive applications. Some popular uses for UDP are video streaming, DNS, and VoIP.
