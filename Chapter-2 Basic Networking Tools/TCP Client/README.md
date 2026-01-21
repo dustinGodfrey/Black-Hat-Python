@@ -1,7 +1,5 @@
-# Chapter 2: Basic Networking Tools
 
-
-## TCP Client
+# TCP Client
 > [!NOTE]
 > A TCP Client allows you to connect to a server using the Transmission Control Protocol. TCP is suited for applications that require reliable, ordered, and error-checked delivery of data. Protocols such as HTTP, HTTPs, FTP, SMTP, and Telnet all use TCP. The TCP data packets are ordered, ensuring the receiving system obtains the correct packets in the correct order. 
 >
