@@ -1,4 +1,4 @@
-## TCP Server
+# TCP Server
 
 > [!NOTE]
 > A TCP server is useful for building services such as internal tooling, simple message brokers, proxies, or lab testing utilities. This example demonstrates a multi-threaded server that can handle multiple clients concurrently.
