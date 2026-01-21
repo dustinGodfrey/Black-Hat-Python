@@ -1,4 +1,4 @@
-## Replacing Netcat
+# Replacing Netcat
 
 > [!NOTE]
 >Netcat is a networking tool that allows the user to read and write data across the network, execute remote commands, send and receive files, and even open a remote shell. For penetration testing, this is extremely useful as some system you may be inside of will not have netcat installed but will in fact have python installed. Being able to write these quick scripts can give you network access using tools already present on the system rather than relying on externally installed utilities.
