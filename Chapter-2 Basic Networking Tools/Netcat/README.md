@@ -116,7 +116,7 @@ python3 netcat.py -t 192.168.x.x -p 5555 -l -c
  On your Kali machine run the following code to start netcat in client mode:
 
 ```bash
-python3 netcat.py -t 192.168.x.x -p
+python3 netcat.py -t 192.168.x.x -p 5555
 ```
 
 On your Kali machine there will be no output to start. Because the client reads from `stdin`, interactive behavior depends on terminal and OS handling of EOF, End Of File marker. In some environments `CTRL + D` may not behave as expected, so reversing client/server roles can be used as a workaround. Once you send over the EOF marker you should see the command prompt show up. From there you can issue commands to the machine and it will execute them. This can be anything from checking machine information, listing directories, or even opening apps. If your command does not execute  it may be stuck in the buffer, pressing `Enter` again should execute your code.
