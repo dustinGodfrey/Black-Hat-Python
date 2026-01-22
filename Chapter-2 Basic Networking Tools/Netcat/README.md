@@ -93,7 +93,7 @@
 #### To Test:
 
 >[!NOTE]
->There are four tests that we will run to see if everything is functioning properly.
+>There are five tests that we will run to see if everything is functioning properly.
 
 1. 
 Open a terminal on your Kali machine and run:
@@ -149,7 +149,7 @@ You can also run the actual program `netcat` on the client and receive the same 
 <p align="center"> <img src="https://i.imgur.com/NOkGxcf.png" width="75%" alt="netcat-execute"/></p>
 
 4. 
-Lastly, we can use our `netcat.py` on the client side to request data. For this example I setup a simple python http server to host the contents of my directory on my local machine.
+Next we can use our `netcat.py` on the client side to request data. For this example I setup a simple python http server to host the contents of my directory on my local machine.
 
 ```bash
 python3 -m http.server 8000
@@ -164,3 +164,30 @@ printf "GET / HTTP/1.1\r\n\r\n" | python3 netcat.py -t 192.168.x.x -p 8000
 This should return some headers and metadata, then show the directory listing
 
 <p align="center"> <img src="https://i.imgur.com/HmM4AvR.png" width="75%" alt="netcat-request"/></p>
+
+5. 
+The last test we will run demonstrates the Upload function of the netcat app. 
+This part took some time to understand because it behaves differently than the other options.
+
+Above, when the listener sets up with the `-c`(command shell) or `-e`(execute) this data is transferred from listener to client. When the client connects and issues an EOF marker the client will receive the command shell or the executed command as if they were on the listener machine.
+
+Using the upload function it works backwards from this. The listener sets up using `-l` and `-u` with the `-u` tag, providing a destination path. The file does not need to exist. This file will receive data from the client.
+
+```bash
+python3 netcat.py -t 0.0.0.0 -p 5555 -l -u="uploaded_from_client.txt"
+```
+
+On the client side, connect to the listener but redirect stdin to the file to upload.
+
+```bash
+python3 netcat.py -t 192.168.x.x -p 5555 < sample.txt
+```
+
+After issuing this command from kali, wait 1-2 seconds then disconnect from the listener with `CTRL + C`. 
+
+Stop the listener and check the directory, you should have a file titled `uploaded_from_client.txt`. If you read the contents of this file it should contain the contents of the `sample.txt` from the client side. 
+
+```bash
+ls -l uploaded_from_client.txt
+cat uploaded_from_client.txt
+```
